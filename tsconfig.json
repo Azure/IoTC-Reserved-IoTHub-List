@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "es2018",
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "noEmitOnError": true,
+        "noImplicitAny": true,
+        "noUnusedParameters": true,
+        "sourceMap": true,
+        "sourceRoot": "./src",
+        "outDir": "./out"
+    }
+}
