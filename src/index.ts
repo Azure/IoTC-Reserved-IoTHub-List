@@ -42,18 +42,28 @@ async function main() {
                     throw error;
                 }
                 else if (response) {
-                    const hubList = JSON.parse(body);
+                    let hubList = JSON.parse(body);
 
                     console.log('\n<=============================================================================>');
                     console.log('\n ******* IoTHub FQDNs associated with the provided IoTC application *******\n');
                     console.log('<=============================================================================>\n');
                     
                     let currHubNum = 1;
-                    let numberHubs = Object.keys(hubList).length;
-                    for (const hub in hubList){
-                        if (currHubNum < numberHubs) {
-                            console.log(`HubName${currHubNum}: ` + hubList[hub]);
+
+                    if (hubList['reservedHubNames']) {
+                        hubList = hubList['reservedHubNames'];
+                        for (const hub of hubList){
+                            console.log(`HubName${currHubNum}: ` + hub);
                             currHubNum++;
+                        }
+
+                    } else {
+                        let numberHubs = Object.keys(hubList).length;
+                        for (const hub in hubList){
+                            if (currHubNum < numberHubs) {
+                                console.log(`HubName${currHubNum}: ` + hubList[hub]);
+                                currHubNum++;
+                            }
                         }
                     }
                     console.log('\n<=============================================================================>\n');
