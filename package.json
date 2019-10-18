@@ -1,6 +1,6 @@
 {
   "name": "iotc-reserved-hubs",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Lists reserved iothubs FQDNs(fully qualified domain names) for an IoTC application",
   "main": "index.js",
   "bin": {

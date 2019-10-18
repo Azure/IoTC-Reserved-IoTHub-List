@@ -1,3 +1,6 @@
+NOTE: This tool only works for Preview Applications.
+====================================================
+
 # Lists the IotHub FQDNs for the IotC application 
 This projects is a utility to get the list of hub names associated with an IoTC application.
 
